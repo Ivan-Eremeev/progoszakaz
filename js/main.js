@@ -146,8 +146,8 @@ jQuery(document).ready(function ($) {
     // Функционал раскрытия меню на мобиле
     $('body').on('click', '.menu-hamb', function (e) {
         e.preventDefault()
-        $(this).toggleClass('open')
-        $(this).next('.header-nav').slideToggle({
+        $(this).stop().toggleClass('open')
+        $(this).next('.header-nav').stop().slideToggle({
             duration: 500,
             start: function () {
                 $(this).css({

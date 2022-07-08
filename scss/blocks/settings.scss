@@ -1,0 +1,25 @@
+/* settings */
+html {
+  min-height: 100vh;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex-grow: 1;
+}
+.wrapper {
+  @include wrapper();
+}
+.row {
+  @include row();
+}
+.navpage {
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+}
+/* /settings */
