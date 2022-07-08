@@ -227,8 +227,10 @@ table {
 
 .btn-border:hover,
 .btn-border:active {
-    border: 1px solid #00618E;
-    color: #00618E;
+    /* border: 1px solid #00618E;
+    color: #00618E; */
+    background-color: #0F78A9;
+    color: #fff;
 }
 
 .btn-border.disabled {
