@@ -13,8 +13,14 @@ $break_md: 1050px;
 $break_sm: 768px;
 $break_xs: 500px;
 
+// Цвета
+$text: #1F2223;
+$primary: #00618E;
+
 // Подключение файлов
 @import 'blocks/settings';
+@import 'blocks/arhiv';
+@import 'blocks/pagination';
 // @import 'blocks/menu';
 // @import 'blocks/accordion';
 // @import 'blocks/modal';

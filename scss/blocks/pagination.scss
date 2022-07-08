@@ -1,0 +1,116 @@
+/* pagination */
+.pagination { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__pages {
+    
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 18px;
+    list-style-type: none;
+  }
+  &__list-link {
+    display: block;
+    padding: 9px 18px;
+    border-radius: 6px;
+    color: #000;
+    &:hover:not(span):not(.active) {
+      color: $primary;
+    }
+    &.active {
+      background-color: #fff;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+  &__list-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 36px;
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid #DCE4E9;
+    svg {
+      fill: $primary;
+    }
+    &--prev {
+      margin-right: 17px;
+    }
+    &--next {
+      margin-left: 17px;
+    }
+    &:hover {
+      border-color: $primary;
+    }
+    &.disabled {
+      pointer-events: none;
+      cursor: default;
+      svg {
+        fill: #DCE4E9;
+      }
+    }
+  }
+  &__filter {
+    display: flex;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &__filter-text {
+    color: #939EB8;
+  }
+  &__filter-list {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    li {
+      margin-left: 22px;
+    }
+    a {
+      color: $primary;
+      &.active {
+        color: $text;
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+  }
+  @media (max-width: $break_sm) {
+    flex-wrap: wrap;
+    &__pages {
+      width: 100%;
+      order: 1;
+    }
+    &__list {
+      justify-content: center;
+    }
+    &__filter {
+      margin-left: auto;
+      margin-bottom: 20px;
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__filter {
+      margin-bottom: 10px;
+    }
+    &__list-link {
+      padding: 6px 8px;
+    }
+    &__list-arrow {
+      &--prev {
+        margin-right: 8px; 
+      }
+      &--next {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+/* /pagination */

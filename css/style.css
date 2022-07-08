@@ -190,10 +190,19 @@ table {
 }
 
 .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-size: 16px;
     line-height: 19px;
     border-radius: 6px;
     padding: 14px 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
 }
 
 .btn-blue {

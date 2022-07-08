@@ -1,0 +1,74 @@
+extends core/base.pug
+
+block title 
+  title Архив вебинаров
+
+block content
+
+  include core/header.pug
+
+  <main>
+
+    .new-container
+      
+      // arhiv
+      .arhiv
+        .title Архив вебинаров
+        mixin arhiv-item(img)
+          a(href="#").arhiv__item 
+            .arhiv__img 
+              img(src= img, alt="")
+            .arhiv__content 
+              .arhiv__date 04 мая 2022
+              .arhiv__title 24 мая 2022 года в 10:00 по МСК состоялся вебинар на тему "Проблемы и риски применения нового порядка оценки заявок при проведении конкурса"
+              .arhiv__text Вебинар на тему "Проблемы и риски применения нового порядка оценки заявок при проведении конкурса" 24 мая 2022 года в 10:00 по МСК  Программа и спикеры: 10:00 – 10:20 Ильинская Ольга, Руководитель учебного центра ЭП РАД Сервисы и функционал ЭП РАД для оптимизации работы заказчика 10:20...
+              .arhiv__btn
+                .btn.btn-border Подробнее
+        +arhiv-item('media/img/webinars/img1.jpg')
+        +arhiv-item('media/img/webinars/img2.jpg')
+        +arhiv-item('media/img/webinars/img1.jpg')
+        +arhiv-item('media/img/webinars/img2.jpg')
+        +arhiv-item('media/img/webinars/img1.jpg')
+        +arhiv-item('media/img/webinars/img2.jpg')
+        +arhiv-item('media/img/webinars/img1.jpg')
+        +arhiv-item('media/img/webinars/img2.jpg')
+        +arhiv-item('media/img/webinars/img1.jpg')
+        +arhiv-item('media/img/webinars/img2.jpg')
+      // /arhiv
+
+      // pagination
+      .pagination
+        .pagination__pages 
+          ul.pagination__list
+            li
+              a(href="#").pagination__list-arrow.pagination__list-arrow--prev.disabled
+                svg(width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  path(fill-rule="evenodd" clip-rule="evenodd" d="M5.48212 11.7614L0.241205 6.57614C-0.0804024 6.25795 -0.0804024 5.74206 0.241205 5.42386L5.48212 0.238644C5.80372 -0.0795479 6.32515 -0.0795479 6.64676 0.238644C6.96837 0.556834 6.96837 1.07272 6.64676 1.39091L2.8117 5.18522H14V6.81478H2.8117L6.64676 10.6091C6.96837 10.9273 6.96837 11.4432 6.64676 11.7614C6.32515 12.0795 5.80372 12.0795 5.48212 11.7614Z")
+            li
+              a(href="#").pagination__list-link.active 2683
+            li
+              a(href="#").pagination__list-link 2682
+            li
+              a(href="#").pagination__list-link 2681
+            li
+              span.pagination__list-link ....
+            li
+              a(href="#").pagination__list-link 1
+            li
+              a(href="#").pagination__list-arrow.pagination__list-arrow--next
+                svg(width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                  path(fill-rule="evenodd" clip-rule="evenodd" d="M8.51788 0.238643L13.7588 5.42386C14.0804 5.74205 14.0804 6.25794 13.7588 6.57614L8.51788 11.7614C8.19628 12.0795 7.67485 12.0795 7.35324 11.7614C7.03163 11.4432 7.03163 10.9273 7.35324 10.6091L11.1883 6.81478H0V5.18522H11.1883L7.35324 1.39091C7.03163 1.07272 7.03163 0.556834 7.35324 0.238643C7.67485 -0.0795478 8.19628 -0.0795478 8.51788 0.238643Z")
+        .pagination__filter 
+          .pagination__filter-text На странице:            
+          ul.pagination__filter-list 
+            li 
+              a(href="#").active 10
+            li 
+              a(href="#") 50
+            li 
+              a(href="#") 100
+      // /pagination
+      
+  </main>
+
+  include core/footer.pug
