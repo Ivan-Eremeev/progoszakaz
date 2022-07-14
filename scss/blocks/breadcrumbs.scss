@@ -1,0 +1,42 @@
+/* breadcrumbs */
+.breadcrumbs { 
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 12px;
+    line-height: 20px;
+    li {
+      padding: 5px 0;
+      &:not(:last-child) {
+        padding-right: 20px;
+        margin-right: 6px;
+        position: relative;
+        &:after {
+          content: '';
+          display: block;
+          width: 10px;
+          height: 10px;
+          background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.148 6.3C7.268 6.044 7.384 5.82 7.496 5.628C7.616 5.436 7.732 5.276 7.844 5.148H0.848V4.644H7.844C7.732 4.508 7.616 4.344 7.496 4.152C7.384 3.96 7.268 3.74 7.148 3.492H7.568C8.072 4.076 8.6 4.508 9.152 4.788V5.004C8.6 5.276 8.072 5.708 7.568 6.3H7.148Z' fill='%2300618E'/%3E%3C/svg%3E%0A");
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 10px;
+          right: 0;
+        }
+      }
+      a{
+        color: $primary;
+        border-bottom: 1px solid transparent;
+        &:hover {
+          border-color: $text;
+        }
+      }
+      span {
+
+      }
+    }
+  }
+}
+/* /breadcrumbs */

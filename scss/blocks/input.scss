@@ -25,6 +25,11 @@
         border-color: $primary;
       }
     }
+    &--icon {
+      input {
+        padding-right: 50px;
+      }
+    }
   }
   &__select {
     position: relative;
@@ -49,6 +54,11 @@
       appearance: none;
       &::-ms-expand {
         display: none;
+      }
+    }
+    &--icon {
+      select {
+        padding-right: 50px;
       }
     }
   }

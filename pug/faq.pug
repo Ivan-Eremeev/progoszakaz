@@ -43,7 +43,7 @@ block content
             .faq__select 
               .input 
                 .input__label ФЗ
-                .input__select
+                .input__select.input__select--icon 
                   select(name="#") 
                     option(value="#") Не важно
                     option(value="#") ФЗ 1
@@ -54,12 +54,12 @@ block content
             .faq__date 
               .input 
                 .input__label Дата размещения
-                .input__input 
+                .input__input.input__input--icon
                   input(type="text" autocomplete="off")#datepicker
                   .input__icon 
                     img(src="media/icons/calendar.svg", alt="")
             .faq__btn 
-              buttom(type="submit").btn.btn-blue Искать
+              button(type="submit").btn.btn-blue Искать
 
         .faq__items 
           .faq__item 

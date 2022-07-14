@@ -223,4 +223,28 @@ jQuery(document).ready(function ($) {
             }
         ]
     });
+
+    new AirDatepicker('#datepickerYear', {
+        view: 'years',
+        minView: 'years',
+        dateFormat: 'yyyy',
+        buttons: [
+            {
+                content() {
+                    return 'Отмена'
+                },
+                onClick(dp) {
+                    dp.clear()
+                }
+            },
+            {
+                content() {
+                    return 'Показать'
+                },
+                onClick(dp) {
+                    dp.hide()
+                }
+            }
+        ]
+    });
 }) // end ready

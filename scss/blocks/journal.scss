@@ -1,0 +1,158 @@
+/* journal */
+.journal { 
+  padding-top: 5px;
+  .title {
+    margin-bottom: 20px;
+  }
+  &__filter {
+    margin-bottom: 30px;
+    > .row {
+      align-items: flex-end;
+    }
+  }
+  &__input {
+    @include col(2);
+    @include col-md(3);
+    @include col-sm(6);
+    @include col-xs(12);
+  }
+  &__body {
+    display: flex;
+  }
+  &__sidebar {
+    width: calc(33.33% - 20px);
+    flex-shrink: 0;
+    padding: 37px 36px;
+    background-color: #fff;
+    border-radius: 6px;
+  }
+  &__main {
+    flex-grow: 1;
+    margin-left: 16px;
+    padding: 41px 47px 45px;
+    background-color: #fff;
+    border-radius: 6px;
+  }
+  &__img {
+    margin-bottom: 35px;
+  }
+  &__menu-title {
+    font-size: 24px;
+    line-height: 25px;
+    margin-bottom: 28px;
+  }
+  &__menu-list {
+    padding-left: 50px;
+    list-style-type: none;
+    counter-reset: num;
+    font-size: 18px;
+    line-height: 25px;
+    li {
+      margin: 25px 0;
+      position: relative;
+      &:before {
+        content: counter(num);
+        counter-increment: num;
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+        left: -50px;
+        width: 20px;
+        color: $text;
+        text-align: right;
+      }
+      &:nth-child(-n+9):before {
+        content: "0" counter(num);
+      }
+    }
+  }
+  &__head {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #DCE4E9;
+  }
+  &__text {
+    h3 {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 20px;
+    } 
+    h4,h5,h6 {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 20px;
+    }
+  }
+  @media (max-width: $break_lg) {
+    &__sidebar {
+      padding: 25px;
+    }
+    &__main {
+      padding: 25px;
+    }
+    &__menu-list {
+      padding-left: 25px;
+      li {
+        &:before {
+          left: -25px;
+        }
+      }
+    }
+  }
+  @media (max-width: $break_md) {
+    &__body {
+      flex-wrap: wrap;
+    }
+    &__sidebar {
+      display: flex;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    &__img {
+      width: 300px;
+      flex-shrink: 0;
+      margin-right: 30px;
+    }
+    &__main {
+      margin-left: 0;
+    }
+    &__menu-list {
+      li {
+        margin: 10px 0;
+      }
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__img {
+      width: 200px;
+    }
+    &__menu-list {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__sidebar {
+      display: block;
+      padding: 15px;
+    }
+    &__img {
+      width: 100%;
+      margin-right: 0;
+    }
+    &__main {
+      padding: 15px;
+    }
+  }
+}
+/* /journal */
