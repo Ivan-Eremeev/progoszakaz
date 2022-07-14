@@ -194,8 +194,33 @@ jQuery(document).ready(function ($) {
     $('body *').on('touchstart', function () { });
 
     $(window).on('resize', function (e) {
-        console.log('resize')
         var widthMobile = $(document).width()
         InsertSearch(widthMobile)
     })
+
+    // Air Datepicker || Календарь
+    new AirDatepicker('#datepicker', {
+        // inline: true,
+        // autoClose: true,
+        range: true,
+        // isMobile: true,
+        buttons: [
+            {
+                content() {
+                    return 'Отмена'
+                },
+                onClick(dp) {
+                    dp.clear()
+                }
+            },
+            {
+                content() {
+                    return 'Показать'
+                },
+                onClick(dp) {
+                    dp.hide()
+                }
+            }
+        ]
+    });
 }) // end ready

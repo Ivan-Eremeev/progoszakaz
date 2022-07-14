@@ -1,0 +1,58 @@
+/* air-datepicker */
+.air-datepicker {
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #F0F2F5;
+  box-shadow: 0px 12px 21px rgba(0, 34, 49, 0.2);
+  border: none;
+}
+.air-datepicker-nav {
+  font-size: 24px;
+  line-height: 28px;
+  color: $primary;
+  i {
+    color: $primary;
+  }
+}
+.air-datepicker-nav--action path {
+  stroke: $primary;
+}
+.air-datepicker--content {
+  font-size: 15px;
+  line-height: 18px;
+  color: $primary;
+}
+.air-datepicker-cell.-day-.-other-month-,
+.air-datepicker-cell.-year-.-other-decade- {
+  color: #BDBDBD;
+}
+.air-datepicker-body--day-name {
+  color: $primary;
+}
+.air-datepicker-cell.-selected- {
+  background-color: $primary;
+  color: #F0F2F5;
+}
+.air-datepicker-cell.-selected-.-focus- {
+  background-color: $primary;
+}
+.air-datepicker-cell.-selected-.-current- {
+  background-color: $primary;
+}
+.air-datepicker-nav {
+  padding-bottom: 10px;
+}
+.air-datepicker--buttons {
+  padding-top: 10px;
+}
+.air-datepicker-button {
+  transition: 0.3s;
+  &:nth-child(2) {
+    background-color: $primary;
+    color: #fff;
+  }
+}
+.air-datepicker--pointer {
+  display: none;
+}
+/* /air-datepicker */
