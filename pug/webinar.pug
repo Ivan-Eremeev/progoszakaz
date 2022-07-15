@@ -1,0 +1,119 @@
+extends core/base.pug
+
+block title 
+  title Навигация по страницам
+
+block content
+
+  include core/header.pug
+
+  <main>
+
+    .new-container
+      
+      // webinar
+      .webinar
+        h1.title Архив вебинаров
+        .webinar__flex
+          .webinar__sidebar 
+            .webinar__sidebar-head Другие вебинары
+            .webinar__sidebar-body 
+              .row 
+                .webinar__sidebar-col
+                  mixin webinar-item()
+                    .webinar__item 
+                      .webinar__item-img 
+                        img(src="media/img/webinars/img1.jpg", alt="")
+                      .webinar__item-content 
+                        .webinar__item-date 04 мая 2022
+                        .webinar__item-text 24 мая 2022 года в 10:00 по МСК состоялся вебинар на тему "Проблемы и риски применения нового порядка оценки заявок при проведении конкурса"
+                  +webinar-item
+                .webinar__sidebar-col
+                  +webinar-item
+                .webinar__sidebar-col
+                  +webinar-item
+          .webinar__main 
+            .webinar__date 04 мая 2022
+            .webinar__title 24 мая 2022 года в 10:00 по МСК состоялся вебинар на тему "Проблемы и риски применения нового порядка оценки заявок при проведении конкурса"
+            .webinar__marks 
+              .webinar__mark КОНКУРС
+              .webinar__mark ОЦЕНКА ЗАЯВОК
+            .webinar__theme Вебинар на тему  "Дополнительные требования к участникам закупок: обзор правоприменительной практики 2022 года"
+            .webinar__date-blue 31 мая 2022 года в 10:00 по МСК 
+            .webinar__subtitle Программа и спикеры:
+
+            .webinar__time 10:00 – 10:20
+
+            .webinar__dark-block 
+              .webinar__spicker 
+                .webinar__avatar
+                  img(src="media/img/spickers/img1.jpg", alt="") 
+                .webinar__spicker-content 
+                  .webinar__name Ильинская Ольга Сергеевна
+                  .webinar__position руководитель Учебного центра ЭП РАД
+              .webinar__text Сервисы и функционал ЭП РАД для оптимизации работы заказчика
+
+            .webinar__time 10:20 – 12:20
+
+            .webinar__dark-block 
+              .webinar__spicker 
+                .webinar__avatar
+                  img(src="media/img/spickers/img2.jpg", alt="") 
+                .webinar__spicker-content 
+                  .webinar__name Гурин Олег Юрьевич
+                  .webinar__position эксперт в сфере закупок, главный редактор журнала «ПРОГОСЗАКАЗ.РФ»
+              ol.webinar__list 
+                li Структура постановления Правительства РФ от 25.12.2021 № 2571 «О дополнительных требованиях к участникам закупки отдельных видов товаров, работ, услуг для обеспечения государственных и муниципальных нужд, а также об информации и документах, подтверждающих соответствие участников закупки указанным дополнительным требованиям…»
+                li Ошибки при применении универсальной стоимостной предквалификации участников закупок (ч. 2.1 ст. 31 Закона № 44-ФЗ)
+                  span Практика установления дополнительных требований к участникам закупок отдельных видов товаров, работ, услуг:
+                  ul 
+                    li что относится к «работам по благоустройству территории» и «строительству некапитального строения, сооружения» (поз. 9);
+                    li что относится к «услугам по техническому обслуживанию зданий, сооружений» (поз. 14);
+                    li что относится к «работам по текущему ремонту зданий, сооружений» (поз. 15);
+                    li какими заказчиками устанавливаются дополнительные требования при закупке «услуг по уборке зданий, сооружений, прилегающих к ним территорий» (поз. 36).
+                li Проверка документов, подтверждающих соответствие участников закупки дополнительным требованиям:
+                  ul 
+                    li допускается ли в 2022 году подтверждать наличие опыта договором субподряда;
+                    li случаи несоответствия предмета представленного контракта дополнительным требованиям; <br>случаи неполноты представленной информации;
+                    li признаки предоставления участниками закупки недостоверных документов и сведений.
+
+            .webinar__time 10:20 – 12:20
+
+            .webinar__dark-block 
+              .webinar__text Ответы на вопросы
+
+            .webinar__btn 
+              .btn.btn-blue Регистрация
+
+            .webinar__warning 
+              .webinar__warning-head Обращаем Ваше внимание!
+              p Для корректной работы сервиса вход на вебинар должен быть осуществлен через следующие браузеры: Google Chrome, Microsoft Edge (Chromium) или Яндекс.Браузер. 
+              img(src="media/icons/Info_orange.svg", alt="").webinar__info
+
+            .webinar__cover 
+              .webinar__cover-img 
+                img(src="media/img/webinars/img2.jpg", alt="")
+              .webinar__social 
+                .webinar__social-title Поделиться
+                .webinar__social-items 
+                  a(href="#").webinar__social-item 
+                    .webinar__social-icon 
+                      img(src="media/icons/vk.svg", alt="")
+                    span Вконтакте
+                  a(href="#").webinar__social-item 
+                    .webinar__social-icon 
+                      img(src="media/icons/ok.svg", alt="")
+                    span Telegram
+                  a(href="#").webinar__social-item 
+                    .webinar__social-icon 
+                      img(src="media/icons/tg.svg", alt="")
+                    span Одноклассники
+                  a(href="#").webinar__social-item 
+                    .webinar__social-icon 
+                      img(src="media/icons/tw.svg", alt="")
+                    span Twitter
+      // /webinar
+      
+  </main>
+
+  include core/footer.pug
