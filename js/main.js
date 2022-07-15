@@ -247,4 +247,46 @@ jQuery(document).ready(function ($) {
             }
         ]
     });
+
+    // Аккордеон
+	function accordion() {
+		if ($('.accordion').length) {
+			$('.accordion').each(function () {
+				var accordion = $(this),
+					trigger = accordion.find('.accordion__trigger'),
+                    content = accordion.find('.accordion__content'),
+					time = 300;
+				trigger.on('click', function () {
+					var $thisTrigger = $(this),
+						data = $thisTrigger.data('trigger');
+					if (!$thisTrigger.hasClass('active')) {
+                        trigger.removeClass('active');
+                        content.stop().slideUp(
+                            time,
+                            function () {
+                                $(this).removeClass('open')
+                            }
+                        );
+                        $thisTrigger.addClass('active');
+						accordion.find('#' + data).stop().slideDown(
+							time,
+							function () {
+								$(this).addClass('open')
+							}
+						);
+					} else {
+						$thisTrigger.removeClass('active');
+						accordion.find('#' + data).stop().slideUp(
+							time,
+							function () {
+								$(this).removeClass('open')
+							}
+						);
+					}
+				})
+			})
+		}
+	}
+	accordion();
+
 }) // end ready

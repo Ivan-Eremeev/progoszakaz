@@ -238,6 +238,15 @@ table {
     color: rgba(0, 97, 142 .3);
 }
 
+.btn-border svg {
+    stroke: #00618E;
+    transition: 0.3s;
+}
+
+.btn-border:hover svg {
+    stroke: #fff;
+}
+
 
 .d-wrapper {
     margin: 0 -15px;

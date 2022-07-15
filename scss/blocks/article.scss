@@ -1,0 +1,227 @@
+/* article */
+.article { 
+  padding-top: 10px;
+  .title {
+    margin-bottom: 18px;
+  }
+  &__search {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  &__search-input {
+    flex-grow: 1;
+    margin-right: 30px;
+    input {
+      &::placeholder {
+        color: $text;
+      }
+    }
+  }
+  &__search-btn {
+    width: 193px;
+    flex-shrink: 0;
+    .btn {
+      width: 100%;
+      height: 100%;
+    } 
+  }
+  &__flex {
+    display: flex;
+    align-items: flex-start;
+  }
+  &__sidebar {
+    width: calc(33.33% - 20px);
+    flex-shrink: 0;
+    padding-top: 27px;
+    background-color: #fff;
+    border-radius: 6px;
+  }
+  &__main {
+    flex-grow: 1;
+    padding: 41px 47px 50px;
+    margin-left: 16px;
+    background-color: #fff;
+    border-radius: 6px;
+  }
+  &__head {
+    padding-bottom: 20px;
+    margin-bottom: 27px;
+    border-bottom: 1px solid #DCE4E9;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  &__body {
+    font-size: 14px;
+    line-height: 18px;
+    p {
+      margin: 20px 0;
+      span {
+        display: block;
+      }
+    }
+    ol {
+      padding-left: 0;
+      list-style-type: none;
+      counter-reset: num;
+      li {
+        margin: 20px 0;
+        position: relative;
+        &:before {
+          content: counter(num) ")";
+          counter-increment: num;
+          display: inline-block;
+          margin-right: 5px;
+          color: $text;
+        }
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    margin-top: 40px;
+  }
+  &__btn-prev {
+    svg {
+      margin-right: 10px;
+    }
+  }
+  &__btn-next {
+    margin-left: 20px;
+    svg {
+      margin-left: 10px;
+    }
+  }
+  &__accordion {
+    
+  }
+  &__item {
+    margin-bottom: 3px;
+  }
+  &__trigger {
+    padding: 17px 40px 17px 37px;
+    background-color: #F7F9FD;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      width: 13px;
+      height: 7px;
+      background-image: url("data:image/svg+xml,%3Csvg width='13' height='7' viewBox='0 0 13 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.314 1L6.157 5.2L1 1' stroke='%23CCD2E3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 25px;
+      right: 26px;
+      transition: 0.3s;
+    }
+    &:before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 3px;
+      background-color: $primary;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: 0.15s;
+    }
+    &.active {
+      &:after {
+        transform: rotate(-90deg);
+      }
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+  &__content {
+    padding: 0 37px;
+  }
+  &__accordion-list {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 24px;
+    li {
+      margin: 24px 0;
+      a {
+        color: #00618E;
+        &.active {
+          color: #1F2223;
+        }
+      }
+    }
+  }
+  @media (max-width: $break_md) {
+    &__trigger {
+      padding: 15px 40px 15px 15px;
+    }
+    &__content {
+      padding: 0 15px;
+    }
+    &__accordion-list {
+      font-size: 14px;
+      line-height: 18px;
+      li {
+        margin: 10px 0;
+      }
+    }
+    &__main {
+      padding: 20px 15px;
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__flex {
+      flex-wrap: wrap;
+    }
+    &__sidebar {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    &__main {
+      margin-left: 0;
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__search {
+    }
+    &__search-input {
+      width: 100%;
+      margin-right: 0;
+      input {
+        border-radius: 6px 0 0 6px;
+      }
+    }
+    &__search-btn {
+      width: 50px;
+      .btn {
+        padding: 0;
+        border-radius: 0 6px 6px 0;
+      }
+    }
+    &__search-icon {
+      width: 24px;
+    }
+    &__head {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &__buttons {
+      flex-wrap: wrap;
+    }
+    &__btn-prev {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    &__btn-next {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+/* /article */
