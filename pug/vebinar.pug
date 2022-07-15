@@ -1,0 +1,71 @@
+extends core/base.pug
+
+block title 
+  title Навигация по страницам
+
+block content
+
+  include core/header.pug
+
+  <main>
+
+    .new-container
+      
+      // vebinar
+      .vebinar
+        h1.title Архив вебинаров
+        .vebinar__flex
+          .vebinar__sidebar 
+            .vebinar__sidebar-head Другие вебинары
+            .vebinar__sidebar-body 
+              .row 
+                .vebinar-sidebar-col
+                  mixin vebinar-item()
+                    .vebinar__item 
+                      .vebinar__item-img 
+                        img(src="media/img/webinars/img1.jpg", alt="")
+                      .vebinar__item-content 
+                        .vebinar__item-date 04 мая 2022
+                        .vebinar__item-text 24 мая 2022 года в 10:00 по МСК состоялся вебинар на тему "Проблемы и риски применения нового порядка оценки заявок при проведении конкурса"
+                  +vebinar-item
+                .vebinar-sidebar-col
+                  +vebinar-item
+                .vebinar-sidebar-col
+                  +vebinar-item
+          .vebinar__main 
+            .vebinar__date 04 мая 2022
+            .vebinar__title 24 мая 2022 года в 10:00 по МСК состоялся вебинар на тему "Проблемы и риски применения нового порядка оценки заявок при проведении конкурса"
+            .vebinar__marks 
+              .vebinar__mark КОНКУРС
+              .vebinar__mark ОЦЕНКА ЗАЯВОК
+            .vebinar__theme Вебинар на тему  "Дополнительные требования к участникам закупок: обзор правоприменительной практики 2022 года"
+            .vebinar__date-blue 31 мая 2022 года в 10:00 по МСК 
+            .vebinar__subtitle Программа и спикеры:
+
+            .vebinar__time 10:00 – 10:20
+
+            .vebinar__dark-block 
+              .vebinar__spicker 
+                .vebinar__avatar
+                  img(src="media/img/spickers/img1.jpg", alt="") 
+                .vebinar__spicker-content 
+                  .vebinar__name Ильинская Ольга Сергеевна
+                  .vebinar__position руководитель Учебного центра ЭП РАД
+              .vebinar__text 
+                p Сервисы и функционал ЭП РАД для оптимизации работы заказчика
+
+            .vebinar__time 10:20 – 12:20
+
+            .vebinar__dark-block 
+              .vebinar__spicker 
+                .vebinar__avatar
+                  img(src="media/img/spickers/img2.jpg", alt="") 
+                .vebinar__spicker-content 
+                  .vebinar__name Гурин Олег Юрьевич
+                  .vebinar__position эксперт в сфере закупок, главный редактор журнала «ПРОГОСЗАКАЗ.РФ»
+              .vebinar__list 
+      // /vebinar
+      
+  </main>
+
+  include core/footer.pug
