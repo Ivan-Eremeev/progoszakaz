@@ -1627,3 +1627,134 @@ main {
 }
 
 /* /team */
+/* person */
+.person {
+  padding-top: 18px;
+}
+.person__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.person__sidebar {
+  width: 304px;
+  margin-right: 30px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.person__item {
+  margin-bottom: 30px;
+}
+.person__img {
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+}
+.person__content {
+  padding: 17px 20px 20px;
+  background-color: #fff;
+  border-radius: 0 0 6px 6px;
+}
+.person__name {
+  font-size: 32px;
+  line-height: 38px;
+}
+.person__position {
+  font-size: 14px;
+  line-height: 22px;
+  color: #A2ABB0;
+  margin-bottom: 18px;
+}
+.person__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 9px;
+}
+.person__text {
+  font-size: 14px;
+  line-height: 18px;
+}
+.person__social {
+  padding: 23px 20px;
+  background-color: #fff;
+  border-radius: 6px;
+}
+.person__main {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 25px 31px 26px;
+  background-color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 18px;
+}
+.person__main h2, .person__main h3, .person__main h4, .person__main h5, .person__main h6 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 17px;
+}
+.person__main p {
+  margin-bottom: 22px;
+}
+.person__main ol {
+  padding-left: 30px;
+  list-style-type: none;
+  counter-reset: num;
+}
+.person__main ol li {
+  position: relative;
+}
+.person__main ol li:before {
+  content: counter(num);
+  counter-increment: num;
+  display: inline-block;
+  color: #1F2223;
+  position: absolute;
+  left: -30px;
+}
+.person__main ol li:nth-child(-n+9):before {
+  content: "0" counter(num);
+}
+@media (max-width: 1050px) {
+  .person__flex {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .person__sidebar {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .person__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 0;
+  }
+  .person__img {
+    width: 300px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+  .person #socialTo {
+    width: 100%;
+  }
+  .person__main {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .person__item {
+    display: block;
+  }
+  .person__img {
+    width: 100%;
+  }
+}
+
+/* /person */
