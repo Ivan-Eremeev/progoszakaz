@@ -1,0 +1,48 @@
+/* team */
+.team { 
+  padding-top: 20px;
+  .title {
+    margin-bottom: 28px;
+  }
+  &__items {
+    
+  }
+  &__col {
+    @include col(3);
+    @include col-md(4);
+    @include col-sm(6);
+    @include col-xs(12);
+  }
+  &__item {
+    display: block;
+    height: 100%;
+    padding: 28px 27px 17px;
+    background-color: #fff;
+    border-radius: 6px;
+    color: $text;
+    text-align: center;
+    &:hover {
+      box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+    }
+  }
+  &__img {
+    height: 299px;
+    margin-bottom: 13px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 12px;
+  }
+  &__position {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+/* /team */

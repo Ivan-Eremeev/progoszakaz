@@ -1567,3 +1567,63 @@ main {
 }
 
 /* /article */
+/* team */
+.team {
+  padding-top: 20px;
+}
+.team .title {
+  margin-bottom: 28px;
+}
+.team__col {
+  width: 25%;
+}
+@media screen and (max-width: 1050px) {
+  .team__col {
+    width: 33.3333333333%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .team__col {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .team__col {
+    width: 100%;
+  }
+}
+.team__item {
+  display: block;
+  height: 100%;
+  padding: 28px 27px 17px;
+  background-color: #fff;
+  border-radius: 6px;
+  color: #1F2223;
+  text-align: center;
+}
+.team__item:hover {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.team__img {
+  height: 299px;
+  margin-bottom: 13px;
+}
+.team__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.team__name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 12px;
+}
+.team__position {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/* /team */
