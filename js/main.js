@@ -364,4 +364,29 @@ jQuery(document).ready(function ($) {
 	}
 	dropBlock($('.js-drop-btn'));
 
+    // YandexMap
+    if ($('#yandexMap').length) {
+        var point = $('#yandexMap').data('point');
+        ymaps.ready(function () {
+            var myMap;
+            myMap = new ymaps.Map("yandexMap", {
+                center: point, // Центер карты
+                zoom: 15, // Коэффициент масштаба карты
+                controls: [ // Элементы управления
+                    'zoomControl',
+                    // 'searchControl',
+                    // 'typeSelector',
+                    // 'fullscreenControl',
+                    'routeButtonControl'
+                ]
+            });
+        // Добавление метки
+            var myPlacemark = new ymaps.Placemark(point, null, {
+            preset: 'islands#redDotIcon'
+        });
+        myMap.geoObjects
+            .add(myPlacemark);
+        });
+    }
+
 }) // end ready

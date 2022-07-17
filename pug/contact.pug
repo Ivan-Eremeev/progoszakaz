@@ -1,0 +1,73 @@
+extends core/base.pug
+
+block title 
+  title Контакты
+
+block content
+
+  include core/header.pug
+
+  <main>
+
+    .new-container
+
+      // breadcrumbs
+      .breadcrumbs
+        ul 
+          li 
+            a(href="#") Главная
+          li 
+            a(href="#") О Нас
+          li 
+            span Контакты
+      // /breadcrumbs
+      
+      // contact
+      .contact
+        h1.title Контакты
+        .contact__body 
+          .row 
+            .contact__sidebar 
+              .contact__map#yandexMap(data-point="[47.21511307426103, 38.869661999999934]")
+            .contact__main 
+              h2.contact__title Связаться с нами
+              ul.contact__list 
+                li 
+                  img(src="media/icons/tel.svg", alt="")
+                  | тел./факс: (8634) 38-26-19 +7(928)965-23-07
+                li 
+                  img(src="media/icons/location.svg", alt="")
+                  | 347900, Ростовская обл., г.Таганрог, <br>Поляковское шоссе, дом 16, корп.3, АБК-1, <br>офис 405. (здание "Прессмаш")
+                li 
+                  img(src="media/icons/email.svg", alt="")
+                  a(href="mailto:progoszakaz@mail.ru") progoszakaz@mail.ru
+              h2.contact__title Реквизиты
+              ul.contact__requisites
+                li ИНН 6154132745 КПП 615401001
+                li Операционный офис «Таганрог»
+                li Южного филиала Публичного акционерного общества «Промсвязьбанк»
+                li г. Волгоград 347900, Ростовская область, г. Таганрог, ул. Петровская, д. 9/11
+                li ИНН 7744000912 ОКПО 70583032
+                li КПП 344443002 ОГРН 1027739019142 БИК 041806715
+                li к/счет № 30101810100000000715
+                li р/счет № 40702810001000037664
+              h2.contact__title Об издании
+              .contact__text 
+                p Сетевое издание ПРОГОСЗАКАЗ.РФ  (16+) 
+                  span Учредитель  - Аршба А.С.
+                  span Главный редактор - Гурин О.Ю.
+                p 
+                  a(href="#") Свидетельство: ЭЛ № ФС 77-79650 от 25.12.2020г. 
+                  span Зарегистрирован Федеральной службой РОСКОМНАДЗОР
+                p Перепечатка материалов, опубликованных в журнале “ПРОГОСЗАКАЗ.РФ”, допускается только с                   письменного согласия редакции. 
+                  span Мнение редакции может не совпадать с мнением авторов. 
+                  span Тираж 10000 экз.
+                p Сведения о правообладателях программного обеспечения
+                  span ФИО - Аршба Константин Алексеевич 
+                  span Рег. номер ПО: 6169
+                  a(href="#") Приказ Минкомсвязи России от 10.01.2020 №4
+      // /contact
+      
+  </main>
+
+  include core/footer.pug

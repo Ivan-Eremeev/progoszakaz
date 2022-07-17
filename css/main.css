@@ -1831,3 +1831,121 @@ main {
 }
 
 /* /header */
+/* contact */
+.contact {
+  padding-top: 6px;
+}
+.contact .title {
+  margin-bottom: 33px;
+}
+.contact__body {
+  padding: 28px 24px 54px;
+  background-color: #fff;
+  border-radius: 6px;
+}
+.contact__sidebar {
+  width: 41.6666666667%;
+}
+@media screen and (max-width: 768px) {
+  .contact__sidebar {
+    width: 100%;
+  }
+}
+.contact__map {
+  height: 340px;
+}
+.contact__main {
+  width: 58.3333333333%;
+}
+@media screen and (max-width: 768px) {
+  .contact__main {
+    width: 100%;
+  }
+}
+.contact__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 25px;
+}
+.contact__list {
+  padding-left: 0;
+  margin-bottom: 40px;
+  list-style-type: none;
+}
+.contact__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin: 32px 0;
+}
+.contact__list li img, .contact__list li svg {
+  width: 18px;
+  margin-right: 17px;
+  margin-top: 2px;
+}
+.contact__list li a {
+  color: #00618E;
+  border-bottom: 1px solid transparent;
+}
+.contact__list li a:hover {
+  border-color: #00618E;
+}
+.contact__requisites {
+  padding-left: 0;
+  list-style-type: none;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 39px;
+}
+.contact__text {
+  font-size: 14px;
+  line-height: 18px;
+}
+.contact__text p {
+  margin: 20px 0;
+}
+.contact__text p span {
+  display: block;
+}
+.contact__text p a {
+  color: #00618E;
+  border-bottom: 1px solid transparent;
+}
+.contact__text p a:hover {
+  border-color: #00618E;
+}
+@media (max-width: 768px) {
+  .contact__sidebar {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  .contact__main {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .contact__title {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
+  .contact__list {
+    margin-bottom: 25px;
+  }
+  .contact__list li {
+    margin: 15px 0;
+  }
+  .contact__requisites {
+    margin-bottom: 25px;
+  }
+  .contact__text p {
+    margin: 10px 0;
+  }
+}
+
+/* /contact */
