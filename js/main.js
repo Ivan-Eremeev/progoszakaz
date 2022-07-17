@@ -210,7 +210,9 @@ jQuery(document).ready(function ($) {
                     return 'Отмена'
                 },
                 onClick(dp) {
-                    dp.clear()
+                    dp.clear();
+                    dp.hide()
+
                 }
             },
             {
@@ -234,7 +236,33 @@ jQuery(document).ready(function ($) {
                     return 'Отмена'
                 },
                 onClick(dp) {
-                    dp.clear()
+                    dp.clear();
+                    dp.hide()
+
+                }
+            },
+            {
+                content() {
+                    return 'Показать'
+                },
+                onClick(dp) {
+                    dp.hide()
+                }
+            }
+        ]
+    });
+
+    new AirDatepicker('#datepickerHeader', {
+        position: 'left top',
+        buttons: [
+            {
+                content() {
+                    return 'Отмена'
+                },
+                onClick(dp) {
+                    dp.clear();
+                    dp.hide()
+
                 }
             },
             {
@@ -306,5 +334,34 @@ jQuery(document).ready(function ($) {
 
 	}
     replace($('#social'), $('#socialTo'), $('#socialFrom'), 1050);
+
+    // Выпадайки при клике по кнопке
+	// Задать блокам выпадайкам айдишник совпадающий с data-drop="" в кнопке для этого блока
+	// Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки
+	function dropBlock(btn) {
+		var $this = undefined,
+				drop = undefined,
+				close = $('.js-drop-close');
+		btn.on('click', function () {
+			$this = $(this);
+			drop = $('#' + $this.data('drop'));
+			$this.toggleClass('is-active');
+			drop.toggleClass('open');
+			$(document).mouseup(function (e) {
+				if (!$this.is(e.target)
+					&& $this.has(e.target).length === 0
+					&& !drop.is(e.target)
+					&& drop.has(e.target).length === 0) {
+					$this.removeClass('is-active');
+					drop.removeClass('open');
+				}
+			});
+		})
+		close.on('click', function () {
+			$('[data-drop="' + $(this).data('drop') +'"]').removeClass('is-active');
+			$('#' + $(this).data('drop')).removeClass('open');
+		})
+	}
+	dropBlock($('.js-drop-btn'));
 
 }) // end ready
