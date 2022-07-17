@@ -39,6 +39,17 @@
     top: 0;
     right: 0;
     z-index: -1;
+    &:focus {
+      ~ .header__calendar-btn {
+        .calendar-fill {
+          fill: $primary;
+        }
+      
+        .calendar-stroke {
+          stroke: $primary;
+        }
+      }
+    }
   }
   @media (max-width: 1200px) {
     &__calendar {

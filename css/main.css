@@ -1809,6 +1809,12 @@ main {
   right: 0;
   z-index: -1;
 }
+.header__calendar-input:focus ~ .header__calendar-btn .calendar-fill {
+  fill: #00618E;
+}
+.header__calendar-input:focus ~ .header__calendar-btn .calendar-stroke {
+  stroke: #00618E;
+}
 @media (max-width: 1200px) {
   .header__calendar {
     margin-left: auto;
