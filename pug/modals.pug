@@ -1,0 +1,97 @@
+extends core/base.pug
+
+block title 
+  title Всплывающие окна
+
+block content
+
+  include core/header.pug
+
+  <main>
+
+    .new-container
+      .navpage 
+        .heading.heading-black Всплывающие окна
+        ul 
+          li 
+            span(data-modal="#modal-1").modal-trigger Регистрация
+      
+  </main>
+
+  // modal registration
+  .modal#modal-1
+    .modal_body
+      .modal_content
+        .modal__head Регистрационная форма
+        // login
+        form(action="#").login
+          .login__text Подписка и доступ к сервисам журнала и сайта Прогосзаказ.РФ
+          .login__row 
+            .row 
+              .login__col 
+                .login__input 
+                  .login__label Наименование организации 
+                    span *
+                  input(type="text")
+              .login__col 
+                .login__input 
+                  .login__label ИНН организации 
+                    span *
+                  input(type="text")
+          .login__text Данные о пользователе, которому предоставляется право доступа к указанному порталу
+          .login__row 
+            .row
+              .login__col 
+                .login__input 
+                  .login__label Имя 
+                    span *
+                  input(type="text")
+              .login__col 
+                .login__input 
+                  .login__label Телефон 
+                    span *
+                  input(type="text")
+              .login__col 
+                .login__input 
+                  .login__label Отчество 
+                    span *
+                  input(type="text")
+              .login__col 
+                .login__input 
+                  .login__label Email 
+                    span *
+                  input(type="text")
+              .login__col 
+                .login__input 
+                  .login__label Фамилия 
+                    span *
+                  input(type="text")
+              .login__col 
+              .login__col 
+                .login__input 
+                  .login__label Промо код 
+                    span *
+                  input(type="text")
+              .login__col 
+            .login__approval 
+              input#approval(type="checkbox" checked).login__approval-input
+              label(for="approval").login__approval-checkbox
+              .login__approval-text Нажимая кнопку "отправить", я даю согласие на обработку своих персональных данных в соответствии с 
+                a(href="#") Политикой конфиденциальности 
+                |  и 
+                a(href="#") Пользовательским соглашением. 
+                span *
+          .login__warning Поля, отмеченные звездочкой (*), обязательны для заполнения.
+          .login__capcha 
+            .login__capcha-img 
+              img(src="media/img/capcha.png", alt="")
+            .login__capcha-input 
+              .login__input 
+                input(type="text")
+          .login__btn 
+            button(type="submit").btn.btn-blue ОТПРАВИТЬ
+        // /login
+        .modal_close.js-modal-close
+  // /modal registration
+
+  include core/footer.pug

@@ -23,7 +23,7 @@
 		<link rel="stylesheet" href="css/plugins/air-datepicker.css">
 		<!-- Main CSS-->
 		<link rel="stylesheet" href="css/main.css">
-		<title>Навигация по страницам</title>
+		<title>Всплывающие окна</title>
 	</head>
 	<body> 
 		<!-- header--><header>
@@ -79,21 +79,103 @@
 		<!-- /header--><main>
 		<div class="new-container">
 			<div class="navpage"> 
-				<div class="heading heading-black">Навигация по страницам</div>
+				<div class="heading heading-black">Всплывающие окна</div>
 				<ul> 
-					<li> <a href="home.html">Главная</a></li>
-					<li> <a href="arhiv.html">Архив вебинаров</a></li>
-					<li> <a href="faq.html">Вопрос-ответ</a></li>
-					<li> <a href="journal.html">Журнал</a></li>
-					<li> <a href="webinar.html">Вебинар</a></li>
-					<li> <a href="article.html">Статья</a></li>
-					<li><a href="team.html">Редакционный совет</a></li>
-					<li> <a href="person.html">Страница резюме человека</a></li>
-					<li> <a href="contact.html">Контакты</a></li>
-					<li> <a href="modals.html">Всплывающие окна</a></li>
+					<li> <span class="modal-trigger" data-modal="#modal-1">Регистрация</span></li>
 				</ul>
 			</div>
 		</div></main>
+		<!-- modal registration-->
+		<div class="modal" id="modal-1">
+			<div class="modal_body">
+				<div class="modal_content">
+					<div class="modal__head">Регистрационная форма</div>
+					<!-- login-->
+					<form class="login" action="#">
+						<div class="login__text">Подписка и доступ к сервисам журнала и сайта Прогосзаказ.РФ</div>
+						<div class="login__row"> 
+							<div class="row"> 
+								<div class="login__col"> 
+									<div class="login__input"> 
+										<div class="login__label">Наименование организации <span>*</span></div>
+										<input type="text">
+									</div>
+								</div>
+								<div class="login__col"> 
+									<div class="login__input"> 
+										<div class="login__label">ИНН организации <span>*</span></div>
+										<input type="text">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="login__text">Данные о пользователе, которому предоставляется право доступа к указанному порталу</div>
+						<div class="login__row"> 
+							<div class="row">
+								<div class="login__col"> 
+									<div class="login__input"> 
+										<div class="login__label">Имя <span>*</span></div>
+										<input type="text">
+									</div>
+								</div>
+								<div class="login__col"> 
+									<div class="login__input"> 
+										<div class="login__label">Телефон <span>*</span></div>
+										<input type="text">
+									</div>
+								</div>
+								<div class="login__col"> 
+									<div class="login__input"> 
+										<div class="login__label">Отчество <span>*</span></div>
+										<input type="text">
+									</div>
+								</div>
+								<div class="login__col"> 
+									<div class="login__input"> 
+										<div class="login__label">Email <span>*</span></div>
+										<input type="text">
+									</div>
+								</div>
+								<div class="login__col"> 
+									<div class="login__input"> 
+										<div class="login__label">Фамилия <span>*</span></div>
+										<input type="text">
+									</div>
+								</div>
+								<div class="login__col"> </div>
+								<div class="login__col"> 
+									<div class="login__input"> 
+										<div class="login__label">Промо код <span>*</span></div>
+										<input type="text">
+									</div>
+								</div>
+								<div class="login__col"> </div>
+							</div>
+							<div class="login__approval"> 
+								<input class="login__approval-input" id="approval" type="checkbox" checked>
+								<label class="login__approval-checkbox" for="approval"></label>
+								<div class="login__approval-text">Нажимая кнопку "отправить", я даю согласие на обработку своих персональных данных в соответствии с <a href="#">Политикой конфиденциальности </a> и <a href="#">Пользовательским соглашением. </a><span>*</span></div>
+							</div>
+						</div>
+						<div class="login__warning">Поля, отмеченные звездочкой (*), обязательны для заполнения.</div>
+						<div class="login__capcha"> 
+							<div class="login__capcha-img"> <img src="media/img/capcha.png" alt=""></div>
+							<div class="login__capcha-input"> 
+								<div class="login__input"> 
+									<input type="text">
+								</div>
+							</div>
+						</div>
+						<div class="login__btn"> 
+							<button class="btn btn-blue" type="submit">ОТПРАВИТЬ</button>
+						</div>
+					</form>
+					<!-- /login-->
+					<div class="modal_close js-modal-close"></div>
+				</div>
+			</div>
+		</div>
+		<!-- /modal registration-->
 		<!-- footer--><footer>
 <div class="new-container">
 <div class="footer">

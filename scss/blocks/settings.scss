@@ -26,6 +26,10 @@ main {
     padding-left: 0;
     li {
       margin: 10px 0;
+      span {
+        cursor: pointer;
+        user-select: none;
+      }
     }
   }
 }
