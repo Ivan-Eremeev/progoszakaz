@@ -99,9 +99,15 @@ html {
 
 .new-container {
     width: 100%;
-    max-width: 1366px;
+    max-width: 1800px;
     padding: 0 30px;
     margin: 0 auto;
+}
+
+@media (max-width: 1920px) {
+    .new-container {
+        max-width: 1366px;
+    }
 }
 
 img,
