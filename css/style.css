@@ -104,12 +104,6 @@ html {
     margin: 0 auto;
 }
 
-@media (max-width: 1920px) {
-    .new-container {
-        max-width: 1366px;
-    }
-}
-
 img,
 picture {
     width: 100%;
