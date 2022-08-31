@@ -1822,6 +1822,88 @@ main {
 .header__calendar-input:focus ~ .header__calendar-btn .calendar-stroke {
   stroke: #00618E;
 }
+.header__lk {
+  position: relative;
+}
+.header__lk-drop {
+  width: 300px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 12px 21px rgba(0, 34, 49, 0.2);
+  box-shadow: 0px 12px 21px rgba(0, 34, 49, 0.2);
+  border-radius: 6px;
+  position: absolute;
+  top: calc(100% + 9px);
+  right: 0;
+  z-index: 22;
+  opacity: 0;
+  -webkit-transform: translate(0, 10px);
+  -ms-transform: translate(0, 10px);
+  transform: translate(0, 10px);
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.header__lk-drop.open {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  visibility: visible;
+}
+.header__lk-title {
+  padding: 23px 24px 19px 26px;
+  border-bottom: 1px solid #DCE4E9;
+  font-weight: 500;
+}
+.header__lk-list {
+  margin: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+.header__lk-list li {
+  border-bottom: 1px solid #DCE4E9;
+}
+.header__lk-list li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 15px 10px 26px;
+  color: #1F2223;
+}
+.header__lk-list li a .header__lk-icon {
+  margin-right: 15px;
+}
+.header__lk-list li a:hover {
+  color: #00618E;
+}
+.header__lk-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  background-color: #F0F2F5;
+  border-radius: 6px;
+}
+.header__lk-icon img {
+  width: 20px;
+  height: 20px;
+}
+.header__lk-text {
+  padding: 10px 15px 10px 26px;
+  font-size: 10px;
+  line-height: 14px;
+}
 @media (max-width: 1200px) {
   .header__calendar {
     margin-left: auto;
@@ -1834,6 +1916,9 @@ main {
 @media (max-width: 500px) {
   .header__calendar {
     position: static;
+  }
+  .header__lk-drop {
+    width: 290px;
   }
 }
 
