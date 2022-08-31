@@ -82,6 +82,8 @@
 				<div class="heading heading-black">Всплывающие окна</div>
 				<ul> 
 					<li> <span class="modal-trigger" data-modal="#modal-1">Регистрация</span></li>
+					<li> <span class="modal-trigger" data-modal="#favorite">Избранные категории</span></li>
+					<li> <span class="modal-trigger" data-modal="#question">Задать вопрос</span></li>
 				</ul>
 			</div>
 		</div></main>
@@ -176,6 +178,60 @@
 			</div>
 		</div>
 		<!-- /modal registration-->
+		<!-- modal favorite-->
+		<div class="modal" id="favorite">
+			<div class="modal_body">
+				<div class="modal_content">
+					<div class="modal__head">Избранные категории</div>
+					<!-- favorite-modal-->
+					<div class="favorite-modal">
+						<div class="favorite-modal__item"> <a href="#">Калькулятор НМКЦ (Калькуляторы НМКЦ)</a>
+							<div class="favorite-modal__del"> </div>
+						</div>
+						<div class="favorite-modal__item"> <a href="#">Калькулятор НМКЦ (охрана) (Калькуляторы НМКЦ)</a>
+							<div class="favorite-modal__del"> </div>
+						</div>
+						<div class="favorite-modal__item"> <a href="#">Проверка контрагентов (Прочие калькуляторы)</a>
+							<div class="favorite-modal__del"> </div>
+						</div>
+						<div class="favorite-modal__item"> <a href="#">Шпаргалка по ПП РФ 2571 (Справочник)</a>
+							<div class="favorite-modal__del"> </div>
+						</div>
+					</div>
+					<!-- /favorite-modal-->
+					<div class="modal_close js-modal-close"></div>
+				</div>
+			</div>
+		</div>
+		<!-- /modal favorite-->
+		<!-- modal question-->
+		<div class="modal" id="question">
+			<div class="modal_body">
+				<div class="modal_content modal_content--gray">
+					<div class="modal__head">Задать вопрос</div>
+					<!-- question-modal-->
+					<form class="question-modal" action="#">
+						<div class="question-modal__textarea"> 
+							<textarea></textarea>
+						</div>
+						<div class="question-modal__buttons"> 
+							<div class="question-modal__file">
+								<input id="fileAttach" type="file" name="">
+								<label class="btn btn-border" for="fileAttach"> Прикрепить</label>
+							</div>
+							<button class="btn btn-blue" type="submit">Отправить</button>
+						</div>
+						<div class="question-modal__text"> 
+							<p>* Перед тем как задавать вопрос нам, Вы можете зайти в раздел Вопрос-ответ и знакомиться с ранее заданными вопросами и ответами на них. Возможно, ваш вопрос задавался ранее.</p>
+							<p>* Прикреплять файлы можно только таких форматов: pdf, ppt, doc, docx, xls, xlsx, jpg, jpeg, gif, png, bmp, rar, zip. Максимальный размер файла: 512 Мб.</p>
+						</div>
+					</form>
+					<!-- /question-modal-->
+					<div class="modal_close js-modal-close"></div>
+				</div>
+			</div>
+		</div>
+		<!-- /modal question-->
 		<!-- footer--><footer>
 <div class="new-container">
 <div class="footer">

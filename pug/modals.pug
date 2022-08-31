@@ -15,6 +15,10 @@ block content
         ul 
           li 
             span(data-modal="#modal-1").modal-trigger Регистрация
+          li 
+            span(data-modal="#favorite").modal-trigger Избранные категории
+          li 
+            span(data-modal="#question").modal-trigger Задать вопрос
       
   </main>
 
@@ -93,5 +97,49 @@ block content
         // /login
         .modal_close.js-modal-close
   // /modal registration
+
+  // modal favorite
+  .modal#favorite
+    .modal_body
+      .modal_content
+        .modal__head Избранные категории
+        // favorite-modal
+        .favorite-modal
+          .favorite-modal__item 
+            a(href="#") Калькулятор НМКЦ (Калькуляторы НМКЦ)
+            .favorite-modal__del 
+          .favorite-modal__item 
+            a(href="#") Калькулятор НМКЦ (охрана) (Калькуляторы НМКЦ)
+            .favorite-modal__del 
+          .favorite-modal__item 
+            a(href="#") Проверка контрагентов (Прочие калькуляторы)
+            .favorite-modal__del 
+          .favorite-modal__item 
+            a(href="#") Шпаргалка по ПП РФ 2571 (Справочник)
+            .favorite-modal__del 
+        // /favorite-modal
+        .modal_close.js-modal-close
+  // /modal favorite
+
+  // modal question
+  .modal#question
+    .modal_body
+      .modal_content.modal_content--gray
+        .modal__head Задать вопрос
+        // question-modal
+        form(action="#").question-modal
+          .question-modal__textarea 
+            textarea
+          .question-modal__buttons 
+            .question-modal__file
+              input#fileAttach(type="file", name="") 
+              label(for="fileAttach").btn.btn-border  Прикрепить
+            button(type="submit").btn.btn-blue Отправить
+          .question-modal__text 
+            p * Перед тем как задавать вопрос нам, Вы можете зайти в раздел Вопрос-ответ и знакомиться с ранее заданными вопросами и ответами на них. Возможно, ваш вопрос задавался ранее.
+            p * Прикреплять файлы можно только таких форматов: pdf, ppt, doc, docx, xls, xlsx, jpg, jpeg, gif, png, bmp, rar, zip. Максимальный размер файла: 512 Мб.
+        // /question-modal
+        .modal_close.js-modal-close
+  // /modal question
 
   include core/footer.pug
