@@ -2408,6 +2408,7 @@ main {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  color: #1F2223;
 }
 .calc-block__item:hover {
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
