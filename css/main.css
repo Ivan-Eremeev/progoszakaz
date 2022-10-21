@@ -2405,6 +2405,13 @@ main {
   border: 2px solid #E1E1E1;
   text-align: center;
   position: relative;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.calc-block__item:hover {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 .calc-block__icon {
   height: 95px;
