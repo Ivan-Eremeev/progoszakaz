@@ -2373,21 +2373,21 @@ main {
 .calc-block__items .row > * {
   padding-left: 40px;
 }
-.calc-block__col-4 {
+.calc-block__col {
   width: 25%;
 }
 @media screen and (max-width: 1050px) {
-  .calc-block__col-4 {
+  .calc-block__col {
     width: 33.3333333333%;
   }
 }
 @media screen and (max-width: 768px) {
-  .calc-block__col-4 {
+  .calc-block__col {
     width: 50%;
   }
 }
 @media screen and (max-width: 500px) {
-  .calc-block__col-4 {
+  .calc-block__col {
     width: 100%;
   }
 }

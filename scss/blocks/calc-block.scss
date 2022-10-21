@@ -20,7 +20,7 @@
       }
     }
   }
-  &__col-4 {
+  &__col {
     @include col(3);
     @include col-md(4);
     @include col-sm(6);
