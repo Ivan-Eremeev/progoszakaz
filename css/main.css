@@ -81,13 +81,10 @@ main {
   }
 }
 
-.btn-gray {
+.btn-disabled {
   background-color: #C5C6C8;
   color: #000;
-}
-.btn-gray:hover {
-  background-color: #00618E;
-  color: #fff;
+  cursor: default;
 }
 
 /* /settings */
