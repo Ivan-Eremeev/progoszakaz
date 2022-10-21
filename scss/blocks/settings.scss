@@ -51,4 +51,12 @@ main {
     display: none;
   }
 }
+.btn-gray {
+  background-color: #C5C6C8;
+  color: #000;
+  &:hover {
+    background-color: $primary;
+    color: #fff;
+  }
+}
 /* /settings */
