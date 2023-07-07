@@ -1,0 +1,137 @@
+/* about */
+.about { 
+  margin-top: 50px;
+  &__col {
+    @include col(12);
+    &--half {
+      @include col(6);
+      @include col-lg(12);
+    }
+  }
+  &__block {
+    padding: 40px 30px 20px;
+    border-radius: 15px;
+    background: #fff;
+    margin-bottom: 30px;
+  }
+  &__text {
+    h1,h2,h3,h4,h5,h6 {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 120%;
+      margin-bottom: 20px;
+    }
+    p {
+      display: flex;
+      align-items: flex-start;
+      margin: 20px 0;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+    }
+    img {
+      width: 170px;
+      margin-left: 20px;
+    }
+    ul {
+      list-style-type: none;
+      font-size: 18px;
+      line-height: 120%;
+      padding-left: 0;
+      li {
+        padding-left: 40px;
+        margin-bottom: 20px;
+        position: relative;
+        &:before {
+          content: '';
+          display: block;
+          width: 22px;
+          height: 22px;
+          margin-right: 15px;
+          background-image: url(../media/icons/check.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+    b {
+      font-weight: bold;
+    }
+    a {
+      color: #00628C;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__list {
+    font-size: 18px;
+    line-height: 120%;
+    margin-bottom: 30px;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+      list-style-type: none;
+      margin-left: -24px;
+      li {
+        width: calc(50% - 24px);
+        margin-bottom: 15px;
+        margin-left: 24px;
+        img {
+          width: 35px;
+          margin-right: 16px;
+        }
+        a {
+          display: flex;
+          align-items: center;
+          color: #000;
+          b {
+            font-weight: bold;
+          }
+          &:hover {
+            color: #044966;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__text {
+      h1,h2,h3,h4,h5,h6 {
+        font-size: 18px;
+        line-height: 21px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 18px;
+      }
+      ul {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+    &__list {
+      font-size: 14px;
+      line-height: 18px;
+      ul {
+        li {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__text {
+      p {
+        display: block;
+      }
+    }
+  }
+}
+/* /about */
